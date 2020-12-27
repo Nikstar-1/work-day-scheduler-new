@@ -8,7 +8,20 @@ $(document).ready(function(){
      localStorage.setItem(timeId, userInput)
  })
 
+$(".time-block").each(function() {
+    var currentTimeHour = moment().hours();
+    var timeBlockId = $(this).attr("id");
+    var thisTimeBlockHour = timeBlockId.slice(5); 
+  
 
+    if (thisTimeBlockHour < currentTimeHour){
+        $(this).addClass("past")
+    } else if (thisTimeBlockHour == currentTimeHour){
+        $(this).addClass("present")
+    } else {
+        $(this).addClass("future")
+    }
+})
 
 
 var localStorage9am = localStorage.getItem("hour-9");
