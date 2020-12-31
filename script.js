@@ -23,7 +23,6 @@ $(".time-block").each(function() {
     }
 })
 
-
 var localStorage9am = localStorage.getItem("hour-9");
 $("#hour-9 .description").val(localStorage9am); 
 var localStorage10am = localStorage.getItem("hour-10");
